@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Academic Planner | Student Portfolio</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="assert/css/style.css">
+
+<link rel="stylesheet"
+href="assert/css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar container">
+
+<a href="index.html"
+class="logo">
+
+Student<span>Portfolio</span>
+
+</a>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a class="active"
+href="planner.html">Planner</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<button id="themeBtn">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+<button id="menuBtn">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div style="text-align:center;">
+
+<h1>
+
+Academic Planner
+
+</h1>
+
+<p>
+
+Organize assignments,
+projects,
+exams and personal study schedule.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="card">
+
+<i class="fas fa-list-check"></i>
+
+<h2 id="totalTasks">
+
+0
+
+</h2>
+
+<p>Total Tasks</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-circle-check"></i>
+
+<h2 id="completedTasks">0</h2>
+
+<p>Completed</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-clock"></i>
+
+<h2 id="pendingTasks">0</h2>
+
+<p>Pending</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-chart-line"></i>
+
+<h2 id="completionRate">0%</h2>
+
+<p>Completion</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADD TASK -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Add New Task</h2>
+
+</div>
+
+<div class="form-card">
+
+<form id="taskForm">
+
+<div class="planner-grid">
+
+<div>
+
+<label>Task Title</label>
+
+<input
+type="text"
+id="taskTitle"
+placeholder="Enter task">
+
+</div>
+
+<div><label>Category</label>
+
+<select id="taskCategory">
+
+<option>Assignment</option>
+
+<option>Project</option>
+
+<option>Exam</option>
+
+<option>Personal</option>
+
+</select>
+</div>
+
+<div><label>Priority</label>
+
+<select id="taskPriority">
+
+<option>High</option>
+
+<option>Medium</option>
+
+<option>Low</option>
+
+</select></div>
+
+<div><label>Due Date</label>
+
+<input
+type="date"
+id="taskDate">
+
+</div>
+
+</div>
+
+<div
+style="margin-top:25px;">
+
+<button
+type="submit"
+class="btn">
+<i class="fas fa-plus"></i>Add Task</button>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section>
+
+<div class="container">
+
+<input
+type="text"
+id="searchTask"
+placeholder="Search task...">
+
+</div>
+
+</section>
+
+<!-- FILTER -->
+
+<section
+style="margin-top:30px;">
+
+<div class="container">
+
+<div
+style="display:flex;
+gap:15px;
+flex-wrap:wrap;">
+
+<button
+class="btn filter-btn"
+data-filter="all">All</button>
+
+<button
+class="btn btn-outline filter-btn"
+data-filter="pending">Pending</button>
+
+<button
+class="btn btn-outline filter-btn"
+data-filter="completed">Completed</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TASK LIST -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>My Tasks</h2>
+
+</div>
+
+<div id="taskList">
+
+<!-- JavaScript -->
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= PROGRESS ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Task Progress</h2>
+
+            <p>Monitor your academic productivity.</p>
+
+        </div>
+
+        <div class="progress-container">
+
+            <div class="progress-bar-bg">
+
+                <div id="plannerProgress" class="planner-progress"></div>
+
+            </div>
+
+            <p id="progressText">90% Completed</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= STUDY TIPS ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Study Tips</h2>
+
+        </div>
+
+        <div class="project-grid">
+
+            <div class="card">
+
+                <i class="fas fa-calendar-check"></i>
+
+                <h3>Plan Ahead</h3>
+
+                <p>Create weekly schedules before deadlines arrive.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-book-reader"></i>
+
+                <h3>Study Daily</h3>
+
+                <p>Study consistently instead of cramming before exams.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-clock"></i>
+
+                <h3>Time Management</h3>
+
+                <p>Break large projects into smaller manageable tasks.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SUMMARY ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>Stay Organized. Stay Successful.</h2>
+
+        <p>
+
+            A well-planned semester helps improve academic performance,
+            reduce stress and increase productivity.
+
+        </p>
+
+        <a href="contact.html" class="btn">
+
+            Need Assistance?
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>Student Portfolio</h3>
+
+            <p>
+
+                Academic portfolio & student planner.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="project.html">Projects</a></li>
+
+                <li><a href="planner.html">Planner</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Follow Me</h4>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+
+            © <span id="year"></span>
+            Student Portfolio.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<button id="topBtn">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="assert/js/main.js"></script>
+
+<script src="assert/js/planner.js"></script>
+
+</body>
+</html>

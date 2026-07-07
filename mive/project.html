@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Student Portfolio</title>
+
+    <meta name="description"
+        content="Explore my student portfolio projects.">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="assert/css/style.css">
+
+    <link rel="stylesheet"
+        href="assert/css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar container">
+
+<a href="index.html" class="logo">
+
+Student<span>Portfolio</span>
+
+</a>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a class="active"
+href="project.html">Projects</a></li>
+
+<li><a href="planner.html">Planner</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<button id="themeBtn">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+<button id="menuBtn">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero hero-projects">
+
+<div class="container">
+
+<div class="hero-copy">
+
+<span class="eyebrow">Featured Work</span>
+
+<h1>Premium Data Science Project Showcase</h1>
+
+<p>
+Discover a polished portfolio of analytics systems, predictive engines, and immersive dashboards designed for high-impact decision making.
+</p>
+
+<div class="hero-actions">
+    <a href="#work" class="btn">Explore Projects</a>
+    <a href="contact.html" class="btn btn-outline">Book a Review</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PROJECT STATS ================= -->
+
+<section class="stats stats-premium">
+
+<div class="container stats-grid">
+
+<div class="card">
+
+<i class="fas fa-folder-open"></i>
+
+<h2>20+</h2>
+
+<p>Completed Projects</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-award"></i>
+
+<h2>4.9/5</h2>
+
+<p>Client Feedback</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-chart-line"></i>
+
+<h2>95%</h2>
+
+<p>Improvement Rate</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-shield-alt"></i>
+
+<h2>10</h2>
+
+<p>Industry Certifications</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FILTER ================= -->
+
+<section class="section" id="work">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Explore the Portfolio
+
+</h2>
+
+<p>
+
+Filtering projects by domain, methodology and visualization style.
+
+</p>
+
+</div>
+
+<div class="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="analysis">Data Analysis</button>
+    <button class="filter" data-filter="ml">Machine Learning</button>
+    <button class="filter" data-filter="viz">Visualization</button>
+    <button class="filter" data-filter="predictive">Predictive Modeling</button>
+</div>
+
+<!-- ================= PROJECT GRID ================= -->
+
+<div class="project-grid">
+
+    <!-- Project 1 -->
+    <article class="project-card" data-category="predictive">
+        <div class="project-media">
+            <img src="./assert/img/forecasting.jpg" alt="Sales Forecasting">
+            <span class="project-badge">Predictive Model</span>
+            <div class="overlay">
+                <a href="#" class="icon"><i class="fas fa-eye"></i></a>
+                <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="project-body">
+            <h3>Sales Forecasting Engine</h3>
+            <p class="muted">A premium forecasting system using ARIMA and gradient boosting to predict monthly revenue with confidence intervals.</p>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">XGBoost</span></div>
+            <div class="project-actions"><a class="btn" href="#">Live Demo</a><a class="btn btn-outline" href="#">GitHub</a></div>
+        </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project-card" data-category="analysis">
+        <div class="project-media">
+            <img src="./assert/img/segmentation.jpg" alt="Customer Segmentation">
+            <span class="project-badge">Business Insight</span>
+            <div class="overlay">
+                <a href="#" class="icon"><i class="fas fa-eye"></i></a>
+                <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="project-body">
+            <h3>Customer Segmentation Suite</h3>
+            <p class="muted">An advanced segmentation workflow that identifies strategic customer cohorts and unlocks actionable retention insights.</p>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">K-means</span><span class="tag">Tableau</span></div>
+            <div class="project-actions"><a class="btn" href="#">Live Demo</a><a class="btn btn-outline" href="#">GitHub</a></div>
+        </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project-card" data-category="viz">
+        <div class="project-media">
+            <img src="./assert/img/visualization.jpg" alt="Interactive Dashboard">
+            <span class="project-badge">Data Story</span>
+            <div class="overlay">
+                <a href="#" class="icon"><i class="fas fa-eye"></i></a>
+                <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="project-body">
+            <h3>Interactive Visualization Dashboard</h3>
+            <p class="muted">A polished executive dashboard built with Plotly and Dash for fast decision-making across business KPIs.</p>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">Dash</span></div>
+            <div class="project-actions"><a class="btn" href="#">Live Demo</a><a class="btn btn-outline" href="#">GitHub</a></div>
+        </div>
+    </article>
+
+</div>
+
+</div>
+
+</section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>Student Portfolio</h3>
+
+                <p>
+                    Academic portfolio focused on analytics and academic growth.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="project.html">Projects</a></li>
+
+                    <li><a href="planner.html">Planner</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>Follow Me</h4>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>
+                © <span id="year"></span> Student Portfolio.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <button id="topBtn">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+    <script src="assert/js/main.js"></script>
+
+</body>
+
+</html>
